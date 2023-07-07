@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plantaholic</title>
+    <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous"> -->
+    <link rel="stylesheet" href="styles.css">
+    
+<script src="https://kit.fontawesome.com/04730c2140.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="bg1 " id="isBlurred">
+       
+        <header>
+            <div class="header-visible">
+                <div class="logoname">
+                    <a href="home.html"> <img id="logopic"
+                            src="depositphotos_75677281-stock-illustration-abstract-sphere-green-leaf-logo-removebg-preview.png"
+                            alt=""></a>
+                    <h2 href="home.html">Plantaholic</h2>
+                </div>
+                <nav>
+                    <ul class="nav_links">
+                        <li>
+                            <div class="dropdown">
+                                <i class="fa-solid fa-seedling"></i>
+                                <i class="fa-solid fa-hand-holding-seedling"></i>
+                                <button class="menubtn1">Plants</button>
+                                <i class="fa fa-caret-down"></i>
+                                <div class="dropdown-plants">
+                                    <a class="links-hidden" href="indoor_plants.html">Indoor plants</a>
+                                    <a class="links-hidden" href="outdoor_plants.html">Outdoor plants</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li> <i class="fa-brands fa-envira"></i>
+                            <a href="gallery.html">Gallery</a>
+                        </li>
+                        <li>
+                            <div class="dropdown">
+                                <i class="fa-solid fa-tree"></i>
+                                <button class="menubtn2">Plant care</button>
+                                <i class="fa fa-caret-down"></i>
+                                <div class="dropdown-care">
+                                    <a class="links-hidden" href="plant_growth.html">Plant growth</a>
+                                    <a class="links-hidden" href="plant_protection.html">Plant protection</a>
+                                    <a class="links-hidden" href="garden_tools.html">Garden tools</a>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="rightnav">
+                    <div>
+                        <button class="login-btn open-button" onclick="openForm()">Log in</button>
+                    </div>
+                    <span class="nav-lines" style="cursor: pointer" onclick="openNav()">&#9776;</span>
+                </div>
+            </div>
+
+            <div id="mySidenav" class="sidenav">
+                <a href="javascript:void(0)" class="closebtn" id="x-button" onclick="closeNav()">&times;</a>
+                <ul class="nav_links">
+                    <li>
+                        <div class="dropdown">
+                            <i class="fa-solid fa-seedling"></i>
+                            <!-- <i class="fa-solid fa-hand-holding-seedling"></i> -->
+                            <button class="menubtn1">Plants</button>
+                            <i class="fa fa-caret-down"></i>
+                            <div class="dropdown-plants">
+                                <a class="links-hidden" href="indoor_plants.html">Indoor plants</a>
+                                <a class="links-hidden" href="outdoor_plants.html">Outdoor plants</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="dropdown gallery-nav-container">
+                            <i class="fa-brands fa-envira"></i>
+                            <a class="gallery-nav" href="gallery.html">Gallery</a>
+                        </div>
+                    </li>
+                    <li>
+                            <div class="dropdown">
+                                <i class="fa-solid fa-tree"></i>
+                                <button class="menubtn2">Plant care</button>
+                                <i class="fa fa-caret-down"></i>
+                                <div class="dropdown-care">
+                                    <a class="links-hidden" href="plant_growth.html">Plant growth</a>
+                                    <a class="links-hidden" href="plant_protection.html">Plant protection</a>
+                                    <a class="links-hidden" href="garden_tools.html">Garden tools</a>
+                                </div>
+                            </div>
+                    </li>
+                    <li>
+                        <button class="login-btn open-button" id="lbtn" onclick="openForm()">Log in</button>
+                    </li>
+                </ul>
+            </div>
+
+        </header>
+        <div class="form-popup" id="myForm">
+            <form action="/action_page.php" class="form-container">
+                <h1 class="form_title">Login</h1>
+                <div class="fields">
+                    <label for="email"> <b>
+
+                            <h3> <i class="fa-solid fa-envelope"></i> Email </h3>
+                        </b> </label>
+                    <input type="text" placeholder="xyz@abc.com" name="email" required>
+                    <p class="error"> Wrong Email </p>
+
+                    <label for="psw"> <b>
+
+                            <h3> <i class="fa-solid fa-key"></i> Password </h3>
+                        </b> </label>
+                    <input type="password" placeholder="Enter Password" name="psw" required>
+                    <p class="error"> Wrong Password </p>
+                </div>
+
+                <span>
+                    First time here? <i> <a href="sign_up.html"> Sign up </a> </i>
+                </span>
+
+                <!-- <div class="buttons"> -->
+                <button type="submit" class="btn login">Login</button>
+                <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+                <!-- </div> -->
+            </form>
+        </div>
+        <!-- <div class="homeimg">
+        <img src="1671370.jpg" alt="">
+    </div> -->
+        <button onclick="topFunction()" id="myBtn" title="Go to top"> <i class="fa-solid fa-circle-arrow-up"> </i> Back
+            to
+            top </button>
+        <section>
+            <div class="para1">
+                <p>
+                    Most people enjoy having trees around their homes, plants in their houses, and nature in general.
+                    However, they may not always understand the importance of plants in their everyday lives. From an
+                    environmental impact to personal enjoyment, a world without
+                    plants would be catastrophic. <br><br>
+                </p>
+                <p>
+                    <b> <u> Importance of Plants for Our Lives </u> </b> <br><br> Although there are many ways that you
+                    could say plants are important, one key aspect is overall good health. Eating a plant-based diet
+                    improves your health and is an important
+                    part of a balanced diet. The MD Anderson Cancer Center strongly suggests eating a diet that’s rich
+                    in fruits and vegetables which are all types of plants. You might not necessarily think about plants
+                    for their culinary uses but probably
+                    at least half of the foods in your diet contain plants in some form. <br><br> From salads to
+                    desserts and much more, plants are an important and even essential part of our food system. If you
+                    didn’t have plants as an option in your
+                    diet, then you would mostly be eating meat and have much more limited options. Additionally, most
+                    people could also benefit from increasing their intake of fruits and vegetables and reducing meat
+                    consumption. Some of the healthiest
+                    populations with low levels of chronic diseases follow a mostly vegetarian diet. <br><br> Plants
+                    also play an aesthetic role in our lives though. Think about the average home and how even a few
+                    houseplants can make a big difference.
+                    They help to freshen the air and add a nice touch to most rooms. Many plants are versatile and grow
+                    well in homes so they are a great way to refresh or add a nice touch to a home without doing a
+                    complete remodel. Plants both inside
+                    and outside are an enjoyable part of life, even if we don’t always realize their impact. <br><br>
+                    Finally,
+                    <b>plants can help us to be more active.</b> If you have a home with a garden or plants, then you’re
+                    probably going to be doing some maintenance. From pruning and weeding, just having plants in the
+                    home is going to make you more active.
+                    This doesn’t mean that everyone is going to spend hours a week on plant care, but it’s a good way to
+                    get some exercise and a type of exercise that most people enjoy.
+                    <br><br>
+                </p>
+            </div>
+        </section>
+        <div class="home_indoor">
+            <p>
+                Little greenery inside the house revitalizes the soul and senses. Having <a href="indoor_plants.html">
+                    indoor home plants </a> have been practised for ages, but what has changed is the choice of plants.
+                <br> <br>
+            </p>
+            <p>
+                Indoor plants are a great way to improve the overall look of the home while also eliminating indoor air
+                toxins and pollutants. Plants are also great for reducing stress and improving the quality of life. <br>
+                <br> Click here to choose the perfect plants according to your needs.
+                <br>
+            </p>
+            <a href="indoor_plants.html"> <button>Indoor Plants</button></a>
+        </div>
+        <!-- <div class="indoor-image">
+            <img id="img-home" src="Home image/photo-1592150621744-aca64f48394a.jpg" alt="Indoor plants" srcset="">
+            <img id="img-home" src="Home image/image.jpg" alt="Indoor plants" srcset="">
+            <img id="img-home" src="Home image/Indoor-Plants_BG-1-1180x704.jpg" alt="Indoor plants" srcset="">
+        </div> -->
+        <div class="gallery-container">
+
+            <div class="gallery-box-container">
+                <div class="gallery-box">
+                    <img class="img-zoom" src="https://source.unsplash.com/900x900/?flower" alt=" Image ">
+                </div>
+                <div class="gallery-box ">
+                    <img class="img-zoom " src="https://source.unsplash.com/900x449/?plant " alt="Image ">
+                    <img class="img-zoom " src="https://source.unsplash.com/900x451/?plant " alt="Image ">
+                </div>
+                <div class="gallery-box ">
+                    <img class="img-zoom " src="https://source.unsplash.com/900x800/?plant " alt="Image ">
+                </div>
+
+            </div>
+        </div>
+
+
+        <div class="home_outdoor home_indoor">
+            <p>
+                <a href="outdoor_plants.html"> Outdoor plants </a> are environment friendly. Growing plants help in
+                reducing pollution, leading toward a greener planet. So, how exactly do these plants help the
+                environment? <br> <br>
+
+
+            </p>
+            <p>
+                We need oxygen to survive and plants need carbon dioxide to thrive. And there is a perfect balance that
+                exists between flora and fauna. It is in our hands to create a thriving, eco-friendly garden. There are
+                air purification plants that you can grow in
+                balcony hanging pots. <br> <br> Click here to choose the perfect plants according to your needs.
+                <br>
+            </p>
+            <a href="outdoor_plants.html"> <button>Outdoor Plants</button></a>
+        </div>
+        <div class="gallery-container">
+
+            <div class="gallery-box-container">
+                <div class="gallery-box">
+                    <img class="img-zoom " src="https://source.unsplash.com/900x448/?plant " alt="Image ">
+                    <img class="img-zoom " src="https://source.unsplash.com/900x452/?plant " alt="Image ">
+                </div>
+                <div class="gallery-box ">
+                    <img class="img-zoom " src="https://source.unsplash.com/900x880/?tree " alt="Image ">
+                </div>
+                <div class="gallery-box ">
+                    <img class="img-zoom " src="https://source.unsplash.com/900x899/?plant " alt="Image ">
+                </div>
+
+            </div>
+        </div>
+
+        <div class="home_indoor home_gallery">
+            <p>
+                Through human evolution, the human eye can distinguish between 2,000 shades of green, but only 100
+                shades of red. Recognizing the different shades of green was important when you were about to eat it or
+                use it for shelter or medicine. This could be one
+                of the reasons why we feel so comfortable around plants. Being surrounded by nature softens this harsh
+                environment, acting as an ease to stress and fatigue. <br>
+                <br> Click here to witness our aesthetic gallery.
+                <br>
+            </p>
+            <a href="gallery.html"> <button>Gallery</button></a>
+        </div>
+
+        <div class="gallery-container">
+
+            <div class="gallery-box-container">
+                <div class="gallery-box">
+                    <img class="img-zoom " src="https://source.unsplash.com/900x900/?tree " alt="Image ">
+                </div>
+                <div class="gallery-box ">
+                    <img class="img-zoom " src="https://source.unsplash.com/900x901/?trees " alt="Image ">
+                </div>
+                <div class="gallery-box ">
+                    <img class="img-zoom " src="https://source.unsplash.com/900x446/?plant " alt="Image ">
+                    <img class="img-zoom " src="https://source.unsplash.com/900x450/?plant " alt="Image ">
+                </div>
+
+            </div>
+        </div>
+
+        <footer>
+            <h2>
+                About us ...
+            </h2>
+            <br>
+            <p>
+                We are not magicians, just really passionate plant people. We are here to encourage people to discover
+                beauty, miracles, and serendipity in their everyday lives. We are driven by our passion to promote the
+                slower way of life, to help you find the small
+                joys that life has to offer.
+            </p>
+            <br>
+            <div>
+                <a href="suggestion.html"> <button>Drop your suggestions here</button></a>
+                <a href="suggestion.html#contact"> <button>Contact Us</button></a>
+            </div>
+        </footer>
+
+    </div>
+    <script type="text/javascript" src="app.js"></script>
+</body>
+
+</html>

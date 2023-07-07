@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plantaholic</title>
+    <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous"> -->
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/079eeb4b36.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="bg2">
+        <header>
+            <div class="header-visible">
+                <div class="logoname">
+                    <a href="home.html"> <img id="logopic"
+                            src="depositphotos_75677281-stock-illustration-abstract-sphere-green-leaf-logo-removebg-preview.png"
+                            alt=""></a>
+                    <h2>Plantaholic</h2>
+                </div>
+                <nav>
+                    <ul class="nav_links">
+                        <li>
+                            <div class="dropdown">
+                                <i class="fa-solid fa-seedling"></i>
+                                <button class="menubtn1">Plants</button>
+                                <i class="fa fa-caret-down"></i>
+                                <div class="dropdown-plants">
+                                    <a class="links-hidden" href="indoor_plants.html">Indoor plants</a>
+                                    <a class="links-hidden" href="outdoor_plants.html">Outdoor plants</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li> <i class="fa-brands fa-envira"></i>
+                            <a href="gallery.html">Gallery</a>
+                        </li>
+                        <li>
+                            <div class="dropdown">
+                                <i class="fa-solid fa-tree"></i>
+                                <button class="menubtn2 active">Plant care</button>
+                                <i class="fa fa-caret-down"></i>
+                                <div class="dropdown-care">
+                                    <a class="links-hidden" href="plant_growth.html">Plant growth</a>
+                                    <a class="links-hidden" href="plant_protection.html">Plant protection</a>
+                                    <a class="links-hidden active" href="garden_tools.html">Garden tools</a>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="rightnav">
+                    <!-- <div>
+                    <input class="searchbar" type="search" placeholder="    Search..">
+                    <button class="searchbtn"><i class="fas fa-search"></i></button>
+                </div> -->
+                    <div>
+                        <button class="login-btn open-button" onclick="openForm()">Log in</button>
+                    </div>
+                    <span class="nav-lines" style="cursor: pointer" onclick="openNav()">&#9776;</span>
+                </div>
+            </div>
+
+            <div id="mySidenav" class="sidenav">
+                <a href="javascript:void(0)" class="closebtn" id="x-button" onclick="closeNav()">&times;</a>
+                <ul class="nav_links">
+                    <li>
+                        <div class="dropdown">
+                            <i class="fa-solid fa-seedling"></i>
+                            <!-- <i class="fa-solid fa-hand-holding-seedling"></i> -->
+                            <button class="menubtn1">Plants</button>
+                            <i class="fa fa-caret-down"></i>
+                            <div class="dropdown-plants">
+                                <a class="links-hidden" href="indoor_plants.html">Indoor plants</a>
+                                <a class="links-hidden" href="outdoor_plants.html">Outdoor plants</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="dropdown gallery-nav-container">
+                            <i class="fa-brands fa-envira"></i>
+                            <a class="gallery-nav" href="gallery.html">Gallery</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="dropdown">
+                            <i class="fa-solid fa-tree"></i>
+                            <button class="menubtn2 active">Plant care</button>
+                            <i class="fa fa-caret-down"></i>
+                            <div class="dropdown-care">
+                                <a class="links-hidden" href="plant_growth.html">Plant growth</a>
+                                <a class="links-hidden" href="plant_protection.html">Plant protection</a>
+                                <a class="links-hidden active" href="garden_tools.html">Garden tools</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <button class="login-btn open-button" onclick="openForm()">Log in</button>
+                    </li>
+                </ul>
+            </div>
+        </header>
+        <div class="form-popup" id="myForm">
+            <form action="/action_page.php" class="form-container">
+                <h1 class="form_title">Login</h1>
+                <div class="fields">
+                    <label for="email"> <b>
+
+                            <h3> <i class="fa-solid fa-envelope"></i> Email </h3>
+                        </b> </label>
+                    <input type="text" placeholder="xyz@abc.com" name="email" required>
+                    <p class="error"> Wrong Email </p>
+
+                    <label for="psw"> <b>
+
+                            <h3> <i class="fa-solid fa-key"></i> Password </h3>
+                        </b> </label>
+                    <input type="password" placeholder="Enter Password" name="psw" required>
+                    <p class="error"> Wrong Password </p>
+                </div>
+
+                <span>
+                    First time here? <i> <a href="sign_up.html"> Sign up </a> </i>
+                </span>
+
+                <!-- <div class="buttons"> -->
+                <button type="submit" class="btn login">Login</button>
+                <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+                <!-- </div> -->
+            </form>
+        </div>
+        <button onclick="topFunction()" id="myBtn" title="Go to top"> <i class="fa-solid fa-circle-arrow-up"> </i> Back
+            to
+            top </button>
+        <section>
+            <div class="para-indoor">
+                <p> <br>
+                    Gardening is incomplete without maintaining plants. For maintaining plants, one needs excellent
+                    quality tools and accessories. <br><br>
+                </p>
+            </div>
+        </section>
+        <div class="indoor-container">
+
+            <div class="indoor gardentools_card">
+                <div class="pic-indoor picgt1">
+                    <div class="indoor-name namein1">
+                        Double Prong Weeder
+                    </div>
+                </div>
+                <div class="indoor-info infogt1">
+                    <p>
+                        The Double Prong Weeder is an upgrade to the Single Prong and is used for weeding, small root
+                        removal, loosening the soil efficiently and digging holes to sow seeds. It comes with a wooden
+                        handle for a powerful and firm grip and is perfectly sized for flower beds and small vegetable
+                        gardens.
+                    </p>
+                </div>
+            </div>
+            <div class="indoor gardentools_card">
+                <div class="pic-indoor picgt2">
+                    <div class="indoor-name namein2">
+                        Five Prong Weeder
+                    </div>
+                </div>
+                <div class="indoor-info infogt2">
+                    <p>
+                        The Five Prong Weeder comes with 5 metal prongs and wooden handles for comfortably turning soil
+                        and cleaning leaves from the garden. Designed to minimise your efforts while giving you maximum
+                        results. The product height is around 33 cm.
+                    </p>
+                </div>
+            </div>
+            <div class="indoor gardentools_card">
+                <div class="pic-indoor picgt3">
+                    <div class="indoor-name namein3">
+                        Single-Edge Sickle
+                    </div>
+                </div>
+                <div class="indoor-info infogt3">
+                    <p>
+                        The Single-Edge Sickle is one of the most ancient of harvesting tools. It is a superior quality
+                        tool used to cut grass or harvest crops very easily. It features a wooden handle which is
+                        provided for a firm grip and allows the user to complete their task with speed and efficiency.
+                    </p>
+                </div>
+            </div>
+            <div class="indoor gardentools_card">
+                <div class="pic-indoor picgt4">
+                    <div class="indoor-name namein4">
+                        Cultivator with Wooden Handle
+                    </div>
+                </div>
+                <div class="indoor-info infogt4">
+                    <p>
+                        The cultivator is an absolute must have for both small and large garden spaces. It has a wooden
+                        handle to give you a firm grip while you're loosening or aerating soil. The chrome polished
+                        steelhead is rust proof and chip resistant. It is designed for easy use and lasting durability
+                        and to make your gardening easier.
+                    </p>
+                </div>
+            </div>
+            <div class="indoor gardentools_card">
+                <div class="pic-indoor picgt5">
+                    <div class="indoor-name namein5">
+                        Transplanter Plastic Sleeve
+                    </div>
+                </div>
+                <div class="indoor-info infogt5">
+                    <p>
+                        This Transplanter features a plastic handle that provides extra protection and control when
+                        digging and planting in the garden. The tool head is made up of powder-coated steel for lasting
+                        durability. The head also features depth gauge markings for accurate planting.
+                    </p>
+                </div>
+            </div>
+            <div class="indoor gardentools_card">
+                <div class="pic-indoor picgt6">
+                    <div class="indoor-name namein6">
+                        Double Side Rake & Trowel
+                    </div>
+                </div>
+                <div class="indoor-info infogt6">
+                    <p>
+                        The Double Side Rake & Trowel is highly beneficial for your garden. It clears leaves, grass, and
+                        other debris with the rake on one side and digs, scoops, and moves dirt with the Trowel the
+                        other side. It has a body of green-coated polished steel and a plastic handle for a comfortable
+                        and firm grip.
+                    </p>
+                </div>
+            </div>
+            <div class="indoor gardentools_card">
+                <div class="pic-indoor picgt7">
+                    <div class="indoor-name namein7">
+                        Trowel with Wooden Handle and Cushion Grip
+                    </div>
+                </div>
+                <div class="indoor-info infogt7">
+                    <p>
+                        This Trowel is the perfect tool to reduce hand fatigue while digging in the garden. It features
+                        a cushioned, wooden handle that provides excellent comfort and control, and the rust-resistant,
+                        extra-large powder-coated steel blade features a sharpened black edge to cut into the ground
+                        with ease.
+                    </p>
+                </div>
+            </div>
+            <div class="indoor gardentools_card">
+                <div class="pic-indoor picgt8">
+                    <div class="indoor-name namein8">
+                        X837CA Plastic Twist Hose Nozzle
+                    </div>
+                </div>
+                <div class="indoor-info infogt8">
+                    <p>
+                        X837CA Plastic Twist Hose Nozzle it adjusts from a fine to a powerful jet stream. It has a soft
+                        insulated handle for a good grip with an instant on-off switch. Additionally, the threaded
+                        nozzle top allows for easy connection of various garden accessories.
+                    </p>
+                </div>
+            </div>
+            <div class="indoor gardentools_card">
+                <div class="pic-indoor picgt9">
+                    <div class="indoor-name namein9">
+                        Fruit Harvest Blade with Nylon Net
+                    </div>
+                </div>
+                <div class="indoor-info infogt9">
+                    <p>
+                        The Fruit Harvest Blade with Nylon Net comes equipped with a carbon steel blade head for quick
+                        and easy harvesting. It is used to harvest and collect garden mangoes or any other fruit. This
+                        tool needs to be attached to a bamboo or a pipe to extend its reach and harvest fruits on higher
+                        branches.
+                    </p>
+                </div>
+            </div>
+            <div class="indoor gardentools_card">
+                <div class="pic-indoor picgt10">
+                    <div class="indoor-name namein10">
+                        Deluxe Grafting Tool
+                    </div>
+                </div>
+                <div class="indoor-info infogt10">
+                    <p>
+                        The Green Seasons Deluxe Grafting Tool is highly efficient in providing cuts with maximum
+                        uniformity. This Anvil tool has an ergonomic PVC grip which makes this tool easy to hold and
+                        handle. Also, it provides maximum cambium contact which facilitates taping.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+        <section class="footer-info">
+            <p>
+                To make your garden look beautiful all the year round use a spade to churn the soil and keep it aerated,
+                use organic compost to top up the soil and keep it at its best for an extended period. Weeds are a
+                nightmare and can eat up the entire garden. Hence, conduct appropriate activities like Pruning, Cutting,
+                and Weeding. To keep the garden well maintained conduct raking daily / weekly, use premium quality
+                spades, mowers, rakes, and wheelbarrows. To spray the pesticides use the right sprayers since an
+                excessive amount of both can harm the plants.
+            </p>
+        </section>
+        <section class="footer-info">
+            <p>
+                Watering is another important aspect of gardening. Keep the plants moist and hydrated but do not
+                overwater the plants. Instead, use watering tools designed to water them properly and without any
+                hassle. Secondly, a healthy garden is devoid of harmful fertilizers and pesticides. Hence, it is
+                advisable to create Mulch. Mow your lawn with a lawnmower and use the leaves and grass to create Mulch.
+                This Mulch would act as a natural fertilizer and compost.
+            </p>
+        </section>
+
+
+    </div>
+    <script type="text/javascript" src="app.js"></script>
+</body>
+
+</html>

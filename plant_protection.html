@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plantaholic</title>
+    <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous"> -->
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/079eeb4b36.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="bg2">
+        <header>
+            <div class="header-visible">
+                <div class="logoname">
+                    <a href="home.html"> <img id="logopic"
+                            src="depositphotos_75677281-stock-illustration-abstract-sphere-green-leaf-logo-removebg-preview.png"
+                            alt=""></a>
+                    <h2>Plantaholic</h2>
+                </div>
+                <nav>
+                    <ul class="nav_links">
+                        <li>
+                            <div class="dropdown">
+                                <i class="fa-solid fa-seedling"></i>
+                                <button class="menubtn1">Plants</button>
+                                <i class="fa fa-caret-down"></i>
+                                <div class="dropdown-plants">
+                                    <a class="links-hidden" href="indoor_plants.html">Indoor plants</a>
+                                    <a class="links-hidden" href="outdoor_plants.html">Outdoor plants</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li> <i class="fa-brands fa-envira"></i>
+                            <a href="gallery.html">Gallery</a>
+                        </li>
+                        <li>
+                            <div class="dropdown">
+                                <i class="fa-solid fa-tree"></i>
+                                <button class="menubtn2 active">Plant care</button>
+                                <i class="fa fa-caret-down"></i>
+                                <div class="dropdown-care">
+                                    <a class="links-hidden" href="plant_growth.html">Plant growth</a>
+                                    <a class="links-hidden active" href="plant_protection.html">Plant protection</a>
+                                    <a class="links-hidden" href="garden_tools.html">Garden tools</a>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="rightnav">
+                    <!-- <div>
+                    <input class="searchbar" type="search" placeholder="    Search..">
+                    <button class="searchbtn"><i class="fas fa-search"></i></button>
+                </div> -->
+                    <div>
+                        <button class="login-btn open-button" onclick="openForm()">Log in</button>
+                    </div>
+                    <span class="nav-lines" style="cursor: pointer" onclick="openNav()">&#9776;</span>
+                </div>
+            </div>
+
+            <div id="mySidenav" class="sidenav">
+                <a href="javascript:void(0)" class="closebtn" id="x-button" onclick="closeNav()">&times;</a>
+                <ul class="nav_links">
+                    <li>
+                        <div class="dropdown">
+                            <i class="fa-solid fa-seedling"></i>
+                            <!-- <i class="fa-solid fa-hand-holding-seedling"></i> -->
+                            <button class="menubtn1">Plants</button>
+                            <i class="fa fa-caret-down"></i>
+                            <div class="dropdown-plants">
+                                <a class="links-hidden" href="indoor_plants.html">Indoor plants</a>
+                                <a class="links-hidden" href="outdoor_plants.html">Outdoor plants</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="dropdown gallery-nav-container">
+                            <i class="fa-brands fa-envira"></i>
+                            <a class="gallery-nav" href="gallery.html">Gallery</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="dropdown">
+                            <i class="fa-solid fa-tree"></i>
+                            <button class="menubtn2 active">Plant care</button>
+                            <i class="fa fa-caret-down"></i>
+                            <div class="dropdown-care">
+                                <a class="links-hidden" href="plant_growth.html">Plant growth</a>
+                                <a class="links-hidden active" href="plant_protection.html">Plant protection</a>
+                                <a class="links-hidden" href="garden_tools.html">Garden tools</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <button class="login-btn open-button" onclick="openForm()">Log in</button>
+                    </li>
+                </ul>
+            </div>
+        </header>
+        <div class="form-popup" id="myForm">
+            <form action="/action_page.php" class="form-container">
+                <h1 class="form_title">Login</h1>
+                <div class="fields">
+                    <label for="email"> <b>
+
+                            <h3> <i class="fa-solid fa-envelope"></i> Email </h3>
+                        </b> </label>
+                    <input type="text" placeholder="xyz@abc.com" name="email" required>
+                    <p class="error"> Wrong Email </p>
+
+                    <label for="psw"> <b>
+
+                            <h3> <i class="fa-solid fa-key"></i> Password </h3>
+                        </b> </label>
+                    <input type="password" placeholder="Enter Password" name="psw" required>
+                    <p class="error"> Wrong Password </p>
+                </div>
+
+                <span>
+                    First time here? <i> <a href="sign_up.html"> Sign up </a> </i>
+                </span>
+
+                <!-- <div class="buttons"> -->
+                <button type="submit" class="btn login">Login</button>
+                <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+                <!-- </div> -->
+            </form>
+        </div>
+        <button onclick="topFunction()" id="myBtn" title="Go to top"> <i class="fa-solid fa-circle-arrow-up"> </i> Back
+            to
+            top </button>
+        <section>
+            <div class="para-indoor">
+                <p> <br>
+                    There are insects and pests trying to infest the plant as a principle of nature. Often they tend to
+                    harm the plants by sucking on vital nutrients on the plant by making it weak and hard to survive
+                    <br>
+                    <br>
+                </p>
+            </div>
+        </section>
+        <div class="indoor-container">
+
+            <div class="indoor gardentools_card">
+                <div class="pic-indoor picprotect1">
+                    <div class="indoor-name namein1">
+                        Vegetable Oil Spray
+                    </div>
+                </div>
+                <div class="indoor-info infoprotect1">
+                    <p>
+                        A homemade insecticide made from vegetable oil mixed with a mild soap (such as Dr. Bronner's
+                        castile soap) can have a devastating effect on certain troublesome insects, such as aphids,
+                        mites, thrips, etc. <br>
+                        The oil coats the bodies of the insects, effectively suffocating them, as it blocks the pores
+                        through which they breathe.
+                    </p>
+                </div>
+            </div>
+
+            <div class="indoor gardentools_card">
+                <div class="pic-indoor picprotect2">
+                    <div class="indoor-name namein1">
+                        Neem Oil Spray
+                    </div>
+                </div>
+                <div class="indoor-info infoprotect2">
+                    <p>
+                        An oil extracted from the seeds of the neem tree is a powerful natural insecticide, capable of
+                        disrupting the life cycle of insects at all stages (adult, larvae, and egg), making it a great
+                        resource for the organic gardener. <br>
+
+                        Neem oil acts as a hormone disruptor and as an "antifeedant" for insects that feed on leaves and
+                        other plant parts. Neem oil is biodegradable and is nontoxic to pets, birds, fish, and other
+                        wildlife
+                    </p>
+                </div>
+            </div>
+
+            <div class="indoor gardentools_card">
+                <div class="pic-indoor picprotect3">
+                    <div class="indoor-name namein1">
+                        Diatomaceous Earth
+                    </div>
+                </div>
+                <div class="indoor-info infoprotect3">
+                    <p>
+                        This natural substance with a somewhat unwieldy name is made from a sedimentary rock created by
+                        fossilized algae (diatoms), and which is a rather abundant resource <br>
+
+                        Diatomaceous earth has a number of uses in and around the home, and acting as a natural
+                        insecticide is just one of them. This material works not by poisoning or smothering the insects,
+                        but instead by virtue of its abrasive qualities and its affinity for absorbing the lipids (a
+                        waxy substance) from insects' exoskeleton, which then dehydrates them to death.
+                    </p>
+                </div>
+            </div>
+
+            <div class="indoor gardentools_card">
+                <div class="pic-indoor picprotect4">
+                    <div class="indoor-name namein1">
+                        Garlic Spray
+                    </div>
+                </div>
+                <div class="indoor-info infoprotect4">
+                    <p>
+                        Garlic is well-known for its pungent aroma, which is delectable to some and yet repellent to
+                        others, and it is this strong scent that comes into play when used as a natural insecticide.
+                        Actually, it's not really clear if garlic spray and chile spray (below) are actually
+                        insecticides or are more likely insect repellents, but either way, these common kitchen
+                        ingredients can be used to knock down, or even knock out, insect infestations in the garden.
+                    </p>
+                </div>
+            </div>
+
+            <div class="indoor gardentools_card">
+                <div class="pic-indoor picprotect5">
+                    <div class="indoor-name namein1">
+                        Chile Pepper Spray
+                    </div>
+                </div>
+                <div class="indoor-info infoprotect5">
+                    <p>
+                        Similar to garlic spray, chile pepper spray is a great homemade natural insect repellent that
+                        can be used for a variety of different pests. Chile spray can be made from either fresh hot
+                        peppers or chile pepper powder. <br>
+
+                        To make a basic chile spray from pepper powder, mix one tablespoon of chile powder with one
+                        quart of water and several drops of mild liquid soap. This mixture can be used full-strength on
+                        the leaves of affected plants.
+                    </p>
+                </div>
+            </div>
+
+            <div class="indoor protec6 gardentools_card">
+                <div class="pic-indoor picprotect6">
+                    <div class="indoor-name namein1">
+                        Modify as Necessary
+                    </div>
+                </div>
+                <div class="indoor-info infoprotect6">
+                    <p>
+                        Although there are many more natural pesticides available, such as Bt (a soil microbe toxic to
+                        certain insects), milky spore (also a microbe), nicotine (extracted as a tea from bulk tobacco),
+                        pyrethrum (derived from a variety of daisy), and iron phosphate (a natural mineral toxic to
+                        slugs and snails), the above natural and homemade insecticide recipes should give you a good
+                        starting point for creating your own version. Every organic gardener seems to have their own
+                        particular blend and ratio of ingredients, so by paying close attention to the effects of a
+                        specific recipe, it's possible to modify it to best suit your own insect battles.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+        <section class="footer-info caution">
+            <p> <i class="fa-solid fa-skull-crossbones"></i>
+                Hot chile peppers can be very potent for humans as well. Be sure to wear gloves when handling them, and
+                keep any sprays that use them away from the eyes, nose, and mouth.
+            </p>
+        </section>
+        <section class="footer-info">
+            <p>
+                Just remember, killing off all of the insects in your garden is not the desired result here, as any
+                healthy ecosystem requires an abundance of beneficial insects, microbes, and fungi, both in the soil and
+                on the plants themselves, so introducing other predatory insects (ladybugs, praying mantis, etc.) or
+                creating good habitat for them, as well as building soil fertility, can also be an effective pest
+                management approach.
+            </p>
+        </section>
+    </div>
+    <script type="text/javascript" src="app.js"></script>
+</body>
+
+</html>

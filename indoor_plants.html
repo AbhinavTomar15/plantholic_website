@@ -1,0 +1,757 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plantaholic</title>
+    <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous"> -->
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/079eeb4b36.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="app.js"></script>
+</head>
+
+<body>
+    <div class="bg2">
+        <header>
+            <div class="header-visible">
+                <div class="logoname">
+                    <a href="home.html"> <img id="logopic"
+                            src="depositphotos_75677281-stock-illustration-abstract-sphere-green-leaf-logo-removebg-preview.png"
+                            alt=""></a>
+                    <h2>Plantaholic</h2>
+                </div>
+                <nav>
+                    <ul class="nav_links">
+                        <li>
+                            <div class="dropdown">
+                                <i class="fa-solid fa-seedling"></i>
+                                <button class="menubtn1 active">Plants</button>
+                                <i class="fa fa-caret-down"></i>
+                                <div class="dropdown-plants">
+                                    <a class="links-hidden active" href="indoor_plants.html">Indoor plants</a>
+                                    <a class="links-hidden" href="outdoor_plants.html">Outdoor plants</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li> <i class="fa-brands fa-envira"></i>
+                            <a href="gallery.html">Gallery</a>
+                        </li>
+                        <li>
+                            <div class="dropdown">
+                                <i class="fa-solid fa-tree"></i>
+                                <button class="menubtn2">Plant care</button>
+                                <i class="fa fa-caret-down"></i>
+                                <div class="dropdown-care">
+                                    <a class="links-hidden" href="plant_growth.html">Plant growth</a>
+                                    <a class="links-hidden" href="plant_protection.html">Plant protection</a>
+                                    <a class="links-hidden" href="garden_tools.html">Garden tools</a>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="rightnav">
+                    <!-- <div>
+                    <input class="searchbar" type="search" placeholder="    Search..">
+                    <button class="searchbtn"><i class="fas fa-search"></i></button>
+                </div> -->
+                    <div>
+                        <button class="login-btn open-button" onclick="openForm()">Log in</button>
+                    </div>
+                    <span class="nav-lines" style="cursor: pointer" onclick="openNav()">&#9776;</span>
+
+
+                </div>
+            </div>
+
+            <div id="mySidenav" class="sidenav">
+                <a href="javascript:void(0)" class="closebtn" id="x-button" onclick="closeNav()">&times;</a>
+                <ul class="nav_links">
+                    <li>
+                        <div class="dropdown">
+                            <i class="fa-solid fa-seedling"></i>
+                            <!-- <i class="fa-solid fa-hand-holding-seedling"></i> -->
+                            <button class="menubtn1 active">Plants</button>
+                            <i class="fa fa-caret-down"></i>
+                            <div class="dropdown-plants">
+                                <a class="links-hidden active" href="indoor_plants.html">Indoor plants</a>
+                                <a class="links-hidden" href="outdoor_plants.html">Outdoor plants</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="dropdown gallery-nav-container">
+                            <i class="fa-brands fa-envira"></i>
+                            <a class="gallery-nav" href="gallery.html">Gallery</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="dropdown">
+                            <i class="fa-solid fa-tree"></i>
+                            <button class="menubtn2">Plant care</button>
+                            <i class="fa fa-caret-down"></i>
+                            <div class="dropdown-care">
+                                <a class="links-hidden" href="plant_growth.html">Plant growth</a>
+                                <a class="links-hidden" href="plant_protection.html">Plant protection</a>
+                                <a class="links-hidden" href="garden_tools.html">Garden tools</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <button class="login-btn open-button" onclick="openForm()">Log in</button>
+                    </li>
+                </ul>
+            </div>
+        </header>
+        <div class="form-popup" id="myForm">
+            <form action="/action_page.php" class="form-container">
+                <h1 class="form_title">Login</h1>
+                <div class="fields">
+                    <label for="email"> <b>
+
+                            <h3> <i class="fa-solid fa-envelope"></i> Email </h3>
+                        </b> </label>
+                    <input type="text" placeholder="xyz@abc.com" name="email" required>
+                    <p class="error"> Wrong Email </p>
+
+                    <label for="psw"> <b>
+
+                            <h3> <i class="fa-solid fa-key"></i> Password </h3>
+                        </b> </label>
+                    <input type="password" placeholder="Enter Password" name="psw" required>
+                    <p class="error"> Wrong Password </p>
+                </div>
+
+                <span>
+                    First time here? <i> <a href="sign_up.html"> Sign up </a> </i>
+                </span>
+
+                <!-- <div class="buttons"> -->
+                <button type="submit" class="btn login">Login</button>
+                <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+                <!-- </div> -->
+            </form>
+        </div>
+        <button onclick="topFunction()" id="myBtn" title="Go to top"> <i class="fa-solid fa-circle-arrow-up"> </i> Back
+            to
+            top </button>
+        <section>
+            <div class="para-indoor">
+                <p> <br>
+                    Indoor plants are easy to tend to, brighten up your interiors and in the bargain, purify all that
+                    stale air and poisonous gases leaving you as fresh as a dewy daisy every day! <br><br>
+                </p>
+            </div>
+        </section>
+        <div class="indoor-container">
+            <div class="indoor in1">
+                <div class="pic-indoor picin1">
+                    <div class="indoor-name namein1">
+                        Peace Lily (Spathiphyllum)
+                    </div>
+                </div>
+                <div class="indoor-info infoin1">
+                    <p>
+                        All of us crave to live a life filled with peace and contentment. Peace Lilly is an indoor plant
+                        that has become universally aligned with these aspirations. Bring it home today and let the
+                        elegant dark green leaves soothe your soul and the huge, fragrant
+                        flowers calm you down at the end of another stressful day! Plus, let the plant help you beat
+                        those allergies whilst it cleanses the air at your home of contaminants such as benzene and
+                        formaldehyde.
+                    </p>
+                </div>
+            </div>
+            <div class="indoor in2 in-even">
+                <div class="pic-indoor picin2">
+                    <div class="indoor-name namein2">
+                        Snake Plant (Sansevieria trifasciata)
+                    </div>
+                </div>
+                <div class="indoor-info infoin2">
+                    <p>
+                        “Mother in law’s Tongue” as it’s commonly referred to, makes for an ideal indoor plant for
+                        several reasons. It’s ornamental value adds a dash of beauty to your house. <br> Snake plant
+                        requires minimal care and to top it all, has superior
+                        air purification qualities. It removes four out of five toxins and is counted among one of the
+                        few plants that also remove carbon dioxide at night. <br> In other words, it continues to clean
+                        the air in your house, even as you catch
+                        up on beauty sleep at night!
+                    </p>
+                </div>
+            </div>
+            <div class="indoor in3">
+                <div class="pic-indoor picin3">
+                    <div class="indoor-name namein3">
+                        Aloe Vera (barbadensis)
+                    </div>
+                </div>
+                <div class="indoor-info infoin3">
+                    <p>
+                        Aloe Vera is also called the <b> “Miracle plant” </b>. There are good reasons for this. It’s
+                        renowned worldwide for having medicinal properties that rejuvenate, soothe and heal the human
+                        body. Aloe is a stemless succulent plant with
+                        thick and fleshy leaves with serrated margins. While it grows wild in several tropical climates,
+                        it alsogrows indoor successfully as a potted plant. It is relatively resistant to most insect
+                        pests. Which again means you don’t have
+                        to spend your time swatting away those pests from leaves and have a ready remedy at hand for
+                        those cuts, bruises and skin ailments!
+                    </p>
+                </div>
+            </div>
+            <div class="indoor in4 in-even">
+                <div class="pic-indoor picin4">
+                    <div class="indoor-name namein4">
+                        Ferns ( Pteridophytes)
+                    </div>
+                </div>
+                <div class="indoor-info infoin4">
+                    <p>
+                        Here’s a plant that was around on earth before you and your ancestors were even born! <br> Ferns
+                        are counted among one of the <b> oldest species of plants on earth </b>, dating back to
+                        prehistoric times. <br> Ferns belong to a group
+                        of vascular seeds, that bear neither flowers nor seeds. With alush green canopy of leaves, they
+                        provide your house with an ornamental value. In addition, they also remove chemical pollutants
+                        from the atmosphere and heavy metals especially
+                        arsenic, from the soil.
+                    </p>
+                </div>
+            </div>
+            <div class="indoor in5">
+                <div class="pic-indoor picin5">
+                    <div class="indoor-name namein5">
+                        Lucky bamboo plant ( Dracaena braunii)
+                    </div>
+                </div>
+                <div class="indoor-info infoin5">
+                    <p>
+                        The plant having a name starting with the word“ Lucky” itself is a dead giveaway! <br> You can
+                        find it everywhere in India; both at homes and at business places, since it is believed to bring
+                        happiness and prosperity in it’s wake.
+                        <br> The plant grows upto 2-3 feet in height and comes highly recommended by Feng Shui
+                        practitioners as well; in Chinese, Lucky Bamboo is known as Fu Gwey Zhu. Fu signifyingluck and
+                        fortune, Gwey drawing power and honor, and Zhu denoting
+                        Bamboo.
+                    </p>
+                </div>
+            </div>
+            <div class="indoor in6 in-even">
+                <div class="pic-indoor picin6">
+                    <div class="indoor-name namein6">
+                        Chinese Evergreen (Aglaonema Commutatum)
+                    </div>
+                </div>
+                <div class="indoor-info infoin6">
+                    <p>
+                        Here’s another plant to bring good luck your way! <br> Chinese evergreens are popular
+                        houseplants across Asia and for good reason too. Not only do they bring prosperity into the
+                        house but these perennial herbs are counted among the
+                        most durable houseplants you can ever grow. Theytolerate poor light, dry air and drought very
+                        well. <br> They have lance-shaped leaves in shades of silver, gray, or shades of green. <br>
+                    </p>
+                </div>
+            </div>
+            <div class="indoor in7">
+                <div class="pic-indoor picin7">
+                    <div class="indoor-name namein7">
+                        Grape Ivy (Parthenocissus Tricuspidata)
+                    </div>
+                </div>
+                <div class="indoor-info infoin7">
+                    <p>
+                        Have a bare wall either vertically or horizontally that needs covering? <br> <br> Then consider
+                        this plant; it’s a climbing ornamental plant, that adds a touch of green and reduces your
+                        cooling costs as well in the bargain! If you
+                        are wondering how it manages to stick to the wall, then here’s the answer; it secretes calcium
+                        carbonate which serves as a natural adhesive pad and enables Grape Ivy to attach itself to a
+                        wall without requiring additional support.
+                    </p>
+                </div>
+            </div>
+            <div class="indoor in8 in-even">
+                <div class="pic-indoor picin8">
+                    <div class="indoor-name namein8">
+                        Flamingo flower (Anthurium)
+                    </div>
+                </div>
+                <div class="indoor-info infoin8">
+                    <p>
+                        Do you belong to those tribes of people who want to add a dash of color around the house and
+                        aren’t just looking for green plants? <br> <br> Then Anthuriums are your answer. The leaves of
+                        this plant are clustered in shape and the inflorescence
+                        bears small flowers which come in several colors. The flowers are collected in a dense spiral on
+                        the spadix. You could also go for a climbing Anthurium to cover up a bare wall, in such a case
+                        be sure to provide the plant with a sturdy
+                        totem pole to help it climb easily.
+                    </p>
+                </div>
+            </div>
+            <div class="indoor in9">
+                <div class="pic-indoor picin9">
+                    <div class="indoor-name namein9">
+                        Areca palm (Dypsis lutescens)
+                    </div>
+                </div>
+                <div class="indoor-info infoin9">
+                    <p>
+                        Instead of simply adding another piece of furniture to cover that empty corner by the wall, why
+                        not go for this exotic-looking plant that can grow anywhere between 3 feet- 8 feet in height?
+                        <br><br> Areca Palm wins hands down as a
+                        choice for an indoor plant because it has multiple stems emerging from the base, arched green
+                        leaves in the shape of a butterfly ( hence also called “butterfly palm”), functions as a
+                        humidifier and what’s more, bears clusters of yellow
+                        flowers in summer to brighten up your home!
+                    </p>
+                </div>
+            </div>
+            <div class="indoor in10 in-even">
+                <div class="pic-indoor picin10">
+                    <div class="indoor-name namein10">
+                        Money Plant (Epipremnum aureum)
+                    </div>
+                </div>
+                <div class="indoor-info infoin10">
+                    <p>
+                        If only plants bore money as gifts on their leaves! <br><br> But since they do not, why not go
+                        for a plant where you can stretch your imagination a bit and visualize that the round, plump,
+                        flat leaves actually look like coins! It doesn’t
+                        harm the cause, that the plant is attractively leafy, requires little care, and efficiently
+                        removes indoor pollutants like formaldehyde and benzene. <br> Of course, the commonly held
+                        belief that while the plant thrives in your house,
+                        you will run neither short of money or friends definitely argues in its favor as well!
+                    </p>
+                </div>
+            </div>
+            <div class="indoor in11">
+                <div class="pic-indoor picin11">
+                    <div class="indoor-name namein11">
+                        Warneck Dracaena (Dracaena deremensis)
+                    </div>
+                </div>
+                <div class="indoor-info infoin11">
+                    <p>
+                        Here’s another fuss-free houseplant to clear the air of your house of pollutants such as xylene
+                        and toluene. The plant has a huge value attached to it because it successfully weathers every
+                        kind of condition well : low light, bright light, and even neglect!
+                    </p>
+                </div>
+            </div>
+            <div class="indoor in12 in-even">
+                <div class="pic-indoor picin12">
+                    <div class="indoor-name namein12">
+                        Heart leaf philodendron (Scandens oxycardium)
+                    </div>
+                </div>
+                <div class="indoor-info infoin12">
+                    <p>
+                        So there are several plants to cover the walls or empty spaces in your home as mentioned above.
+                        But how about one to adorn an empty table or desk? <br><br> Why not do it with this love tree? (
+                        the literal name of this plant in Greek!).
+                        It has dark green, shiny heart-shaped leaves which look great on a tabletop or even as a hanging
+                        plant. It has several other factors going for it as well; it thrives on neglect, is impossible
+                        to kill, and removes toxins from the air
+                        as well!
+                    </p>
+                </div>
+            </div>
+            <div class="indoor in13">
+                <div class="pic-indoor picin13">
+                    <div class="indoor-name namein13">
+                        Azalea (Rhododendron Simsii)
+                    </div>
+                </div>
+                <div class="indoor-info infoin13">
+                    <p>
+                        Here’s a popular, fragrant flowering shrub that has always signaled the oncoming arrival of the
+                        spring season. A flower that blooms in a multitude of colors, is renowned for its beauty and
+                        immortalized in the poetry of a prominent Chinese poet, Du Fu
+                        of the Tang dynasty! <br><br> Plant these lovely blooms at home and you will be in august
+                        company. Azalea festivals are held in Japan, Hong Kong, Korea, and the USA which draw hundreds
+                        and thousands of visitors
+                        each year.
+                    </p>
+                </div>
+            </div>
+            <div class="indoor in14 in-even">
+                <div class="pic-indoor picin14">
+                    <div class="indoor-name namein14">
+                        Green Spider Plant (Chlorophytum Comosum)
+                    </div>
+                </div>
+                <div class="indoor-info infoin14">
+                    <p>
+                        Looking for an indoor plant that is exceptionally easy to care for? A plant whose leaves can add
+                        a dash of contrast to your home? Then look no further. <br><br> Spider plants have leaves that
+                        look like blades of grass with streaks
+                        of different colors either in the center or at the edges. In fact, if this is your first brush
+                        with houseplants, this plant would be the ideal choice for you to get started off on this
+                        journey!
+                    </p>
+                </div>
+            </div>
+            <div class="indoor in15">
+                <div class="pic-indoor picin15">
+                    <div class="indoor-name namein15">
+                        Gerbera Daisy
+                    </div>
+                </div>
+                <div class="indoor-info infoin15">
+                    <p>
+                        The fifth most popular flower in the world. One that has showy, long-lasting blooms that denote
+                        innocence, purity, and cheerfulness and that comes in a variety of colors to brighten up each
+                        day. That’s a Gerber Daisy for you. <br>
+                        <br> In fact, Gerbera daisies have come to denote our feelings and are sent out as gifts on many
+                        special occasions to congratulate, express thankfulness or even greet others on birthdays!
+                    </p>
+                </div>
+            </div>
+            <div class="indoor in16 in-even">
+                <div class="pic-indoor picin16">
+                    <div class="indoor-name namein16">
+                        Weeping Fig (Ficus Benjamina)
+                    </div>
+                </div>
+                <div class="indoor-info infoin16">
+                    <p>
+                        <br> Don’t go by the common name! It’s the official tree of Bangkok and as a houseplant is
+                        renowned for its elegant growth and can easily withstand poor growing conditions and rid your
+                        home of formaldehyde gases.
+                    </p>
+                </div>
+            </div>
+            <div class="indoor in17">
+                <div class="pic-indoor picin17">
+                    <div class="indoor-name namein17">
+                        Croton (Codiaeum Variegatum)
+                    </div>
+                </div>
+                <div class="indoor-info infoin17">
+                    <p>
+                        Do you feel your living room looks pale, drab or dull? Want your kids to join you at the dining
+                        table for food and some heart-to-heart chats? Then let croton with its bright yellow, orange,
+                        red, and even black foliage spruce it up for you. You could always
+                        grow the plant in a colorful pot to add to the charm!
+                    </p>
+                </div>
+            </div>
+            <div class="indoor in18 in-even">
+                <div class="pic-indoor picin18">
+                    <div class="indoor-name namein18">
+                        Indian Basil (Ocimum Tenuiflorum)
+                    </div>
+                </div>
+                <div class="indoor-info infoin18">
+                    <p>
+                        It’s been grown in India from as far back as 5,000 years. No wonder then, that Indians harbor a
+                        deep cultural and religious attachment with the plant from time immemorial. In fact in the
+                        Ayurvedic approach to medicine, it has been revered for its medicinal
+                        properties in curing several diseases; dried leaves have also been used as mosquito repellents
+                        for centuries. <br><br> On the other hand , Italian & southeast Asian cuisines extensively
+                        utilise basil as a culinary
+                        herb to add flavour to dishes!
+                    </p>
+                </div>
+            </div>
+            <div class="indoor in19">
+                <div class="pic-indoor picin19">
+                    <div class="indoor-name namein19">
+                        Lavender (Lavandula)
+                    </div>
+                </div>
+                <div class="indoor-info infoin19">
+                    <p>
+                        A flower that adds color, fragrance, repels insects, is good for your beauty regimen all at one
+                        go; that’s lavender for you. It may not fall under the traditional houseplant category, yet the
+                        benefits far outweigh any qualms you have; especially since
+                        the plant thrives in sunny climes like India!
+                    </p>
+                </div>
+            </div>
+            <div class="indoor in20 in-even">
+                <div class="pic-indoor picin20">
+                    <div class="indoor-name namein20">
+                        Ladies’ Slipper Orchid (Cypripedioideae)
+                    </div>
+                </div>
+                <div class="indoor-info infoin20">
+                    <p>
+                        If you thought you would need to trek through exotic foreign locales or woods to view an orchid,
+                        then you haven’t met our showcased houseplant, Ladies Slipper Orchid! The plant by itself, has
+                        only 1 set of 2 leaves from which a single flower stalk grows
+                        out; the entire appearance being that of a ladies slipper, hence the name!
+                    </p>
+                </div>
+            </div>
+            <div class="indoor in21">
+                <div class="pic-indoor picin21">
+                    <div class="indoor-name namein21">
+                        Jade Plant (Crassula Ovata)
+                    </div>
+                </div>
+                <div class="indoor-info infoin21">
+                    <p>
+                        Looking for an extremely low-maintenance plant that can be grown in India? The Jade plant is a
+                        great choice. It is also commonly known as friendship tree, money tree, and lucky plant. It is
+                        widely believed to bring good luck to its owners. <br>
+                        <br> Jade plant requires little watering and can grow easily under extreme drought conditions.
+                        During winters, it needs to be waterer monthly. Just keep this plant near windows and forget
+                        about it. You may need to water it weekly during
+                        summers if kept indoors.
+                    </p>
+                </div>
+            </div>
+            <div class="indoor in22 in-even">
+                <div class="pic-indoor picin22">
+                    <div class="indoor-name namein22">
+                        ZZ Plant (Zamioculcas Zamiifolia)
+                    </div>
+                </div>
+                <div class="indoor-info infoin22">
+                    <p>
+                        ZZ plant is a fantastic plant that can be grown easily in the Indian indoor environment. ZZ
+                        plant would be a stunning addition to your home. It has elegant shiny leaves that really
+                        contrast well with the interiors. ZZ Plant derives its name from its botanical
+                        name Zamioculcas zamiifolia. <br> <br> It can withstand a wide range of temperature variations
+                        and can withstand low light conditions. It is tolerant to neglect and can survive infrequent
+                        watering schedules.
+                    </p>
+                </div>
+            </div>
+            <div class="indoor in23">
+                <div class="pic-indoor picin23">
+                    <div class="indoor-name namein23">
+                        Donkey Tail (Sedum morganianum)
+                    </div>
+                </div>
+                <div class="indoor-info infoin23">
+                    <p>
+                        Sedum morganianum is one of the most beautiful succulent plants that add an exotic touch to the
+                        place where it is present. The succulent is most often called by the name donkey tail it is
+                        characterized by the compact arrangement of bulged pointed leaves
+                        which are sequentially arranged on a thin trailing stem. <br> <br> Donkey tail succulent with
+                        minimal care can do wonders to provide that desert touch to your landscape. Whosoever is
+                        planting this succulent is required.
+                        to keep some patience, as the burrow’s tail requires quite a time to grow.
+                    </p>
+                </div>
+            </div>
+            <div class="indoor in24 in-even">
+                <div class="pic-indoor picin24">
+                    <div class="indoor-name namein24">
+                        Fiddle leaf-fig plant
+                    </div>
+                </div>
+                <div class="indoor-info infoin24">
+                    <p>
+                        The fiddle leaf fig plant is fetching a great demand for itself nowadays because of its elegance
+                        and beauty. The plant can add style and drama to the dull space or the corner of your room. This
+                        classy plant requires very little care and can thrive with
+                        just partial indirect light falling from the window. <br> <br> This plant is very sturdy and
+                        provides natural fresh air by absorbing all the toxic chemicals present indoors and thus aids in
+                        better sleeping. The
+                        plant requires well-drained soil with a wet atmosphere and high humidity to grow healthier.
+                    </p>
+                </div>
+            </div>
+            <div class="indoor in25">
+                <div class="pic-indoor picin25">
+                    <div class="indoor-name namein25">
+                        String of Pearl Plants
+                    </div>
+                </div>
+                <div class="indoor-info infoin25">
+                    <p>
+                        You could go for a variety of plants to make your interiors look bright and beautiful. One of
+                        them is the String of Pearls Plant. <br> <br> These succulent plants are a great indoor
+                        collection and are one of the easiest to grow in
+                        any weather condition. They belong to the family of Senecios that are stringed beady plants,
+                        great for indoors. <br> <br> They do really well as a houseplant because they tolerate and
+                        thrive in dry indoor air spaces.
+                    </p>
+                </div>
+            </div>
+            <div class="indoor in26 in-even">
+                <div class="pic-indoor picin26">
+                    <div class="indoor-name namein26">
+                        Bunny Ear Cactus
+                    </div>
+                </div>
+                <div class="indoor-info infoin26">
+                    <p>
+                        These adorable, yet prickly plants are a great indoor addition. If you have children, it is best
+                        to keep them high up, since their thorns are small and not so welcoming. As desert plants, Bunny
+                        Ear Cactus is great to adorn dry indoor spaces. They do not
+                        require too much maintenance and can be easily taken care of. <br> <br> They are native to
+                        Mexico regions but have made their way through to different parts of the world. They are also
+                        called Polka Dot cactus because
+                        of dotted yellow glochids on their green surface.
+                    </p>
+                </div>
+            </div>
+            <div class="indoor in27">
+                <div class="pic-indoor picin27">
+                    <div class="indoor-name namein27">
+                        Pothos
+                    </div>
+                </div>
+                <div class="indoor-info infoin27">
+                    <p>
+                        A trailing leafy vine that adds aesthetic value to your home, Pothos is a great indoor
+                        houseplant to have! Its leaves are heart-shaped bright green and waxy in texture and vary in
+                        colors ranging from pale green, white or yellow. <br>
+                        <br> They are also known as Devils’ Ivy and can be easily grown indoors. They are excellent in
+                        purifying the air in your home and take in carbon dioxide even while you sleep. Pothos does not
+                        require too much maintenance and can be
+                        used to adorn office spaces as well as homes.
+                    </p>
+                </div>
+            </div>
+            <div class="indoor in28 in-even">
+                <div class="pic-indoor picin28">
+                    <div class="indoor-name namein28">
+                        Dragon Tree
+                    </div>
+                </div>
+                <div class="indoor-info infoin28">
+                    <p>
+                        The Dragon Tree houseplant is an excellent collection for your indoor plants as they have a
+                        tough root system and can survive under almost any condition. They are extremely easy to grow
+                        indoors and look absolutely gorgeous because of their colorful foliage.
+                        <br> <br> They act as natural purifiers and grow up to 6 feet in length. It is advisable to keep
+                        it away from pets and children because of its toxic nature.
+                    </p>
+                </div>
+            </div>
+            <div class="indoor in29">
+                <div class="pic-indoor picin29">
+                    <div class="indoor-name namein29">
+                        Prayer Plant
+                    </div>
+                </div>
+                <div class="indoor-info infoin29">
+                    <p>
+                        Prayer plants make an amazing addition to your collection of indoor houseplants. They have dark
+                        green leaves with light green/white and red stripes running down their spine. This plant gets
+                        its unique name because of the unique nature of its leaves. They
+                        fold in an upright position at night, resembling that of folding hands in prayer. <br> <br>
+                        There are various varieties of Prayer Plants, namely ranging from 40 to 50 species of the same.
+                        Each has different characteristics
+                        but has a distinct similarity of spines that are visible at the center.
+                    </p>
+                </div>
+            </div>
+            <div class="indoor in30 in-even">
+                <div class="pic-indoor picin30">
+                    <div class="indoor-name namein30">
+                        Rubber Plant
+                    </div>
+                </div>
+                <div class="indoor-info infoin30">
+                    <p>
+                        Rubber Plants serve as great decorative plants indoors and add a lot of aesthetic value to your
+                        home. Growing them is not as difficult as it seems. Though they can grow into full-length trees
+                        if kept in your gardens, they are easy to tend to indoors as
+                        well. <br> <br> It is better to get them while they are still small, to help them adapt to your
+                        home conditions. Keeping them in small pots restricts their growth as their roots do not have
+                        too much space to spread,
+                        thus making them ideal houseplants.
+                    </p>
+                </div>
+            </div>
+            <div class="indoor in31">
+                <div class="pic-indoor picin31">
+                    <div class="indoor-name namein31">
+                        Hawaiian Umbrella Tree Bonsai
+                    </div>
+                </div>
+                <div class="indoor-info infoin31">
+                    <p>
+                        The Hawaiian umbrella tree is most commonly known as the dwarf umbrella tree. It is native to
+                        Southeast Asia as well as Australia. Its thin trunks and shrub-like appearance make it easy to
+                        grow indoors and tend to as well. <br>
+                        <br> Growing Bonsais is quite an art and with the help of tutorials, you can absolutely master
+                        the methods well. <br> <br> They can tolerate low humidity and low light, hence thrive as
+                        houseplants. It is best to keep it out of reach
+                        of children and pets due to the presence of calcium oxalate.
+                    </p>
+                </div>
+            </div>
+            <div class="indoor in32 in-even">
+                <div class="pic-indoor picin32">
+                    <div class="indoor-name namein32">
+                        Grafted Ficus Bonsai
+                    </div>
+                </div>
+                <div class="indoor-info infoin32">
+                    <p>
+                        The Ficus is a popular breed of tropical and evergreen trees. There are over 600 species of
+                        Ficus worldwide. Most Ficus are fast growers and hence prove to be excellent for novice
+                        gardeners. <br> <br> The Ficus “Ginseng” plants have
+                        fat trunks with substantially exposed roots, which give the tree an extremely tropical look.
+                        Their stocky structure makes it an extremely appealing addition to your collection of Bonsais at
+                        home.
+                    </p>
+                </div>
+            </div>
+            <div class="indoor in33">
+                <div class="pic-indoor picin33">
+                    <div class="indoor-name namein33">
+                        Asparagus Fern
+                    </div>
+                </div>
+                <div class="indoor-info infoin33">
+                    <p>
+                        These gorgeous-looking plants are an absolute delight to have indoors. With a grass-like
+                        structure and soft hanging spurs, the Asparagus Fern is quite easy to grow indoors. It grows
+                        very quickly; hence one has to take care of overgrowth. <br>
+                        <br> Although they resemble a soft bushy fur, their spurs are quite prickly and it is best to
+                        cover your hands while handling them. It can adorn your window like a creeper set to cover your
+                        curtain rods.
+                    </p>
+                </div>
+            </div>
+            <div class="indoor in34 in-even">
+                <div class="pic-indoor picin34">
+                    <div class="indoor-name namein34">
+                        Lemon Button Fern
+                    </div>
+                </div>
+                <div class="indoor-info infoin34">
+                    <p>
+                        Lemon buttons ferns are named so because of their rounded leaves as well as short and demure
+                        stature. They are one of the most easily available houseplants and can be planted without any
+                        difficulty. <br> <br> These cute and dainty-looking
+                        ferns make an excellent addition to your indoor plants. They can also be planted as terrariums
+                        to make your home look bright and full. They act as natural purifiers and remain evergreen if
+                        taken care of properly. Their leaves give
+                        out a soft lemony scent once crushed.
+                    </p>
+                </div>
+            </div>
+            <div class="indoor in35">
+                <div class="pic-indoor picin35">
+                    <div class="indoor-name namein35">
+                        Dumb Cane
+                    </div>
+                </div>
+                <div class="indoor-info infoin35">
+                    <p>
+                        Dieffenbachia is a simple green leafed plant that is easy to plant indoors and take care of. It
+                        belongs to the Araceae tropical flowering plant group of plants. These plants are widely used by
+                        households to adorn their living rooms or patios because of
+                        their aesthetics. <br> <br> The Dieffenbachia is one of the easiest to grow indoors and probably
+                        a good way to start indoor gardening. One has to take great precautions while planting a
+                        Dieffenbachia indoors. They
+                        have poisonous leaves and one bite can easily paralyze a person. Keep it away from the reach of
+                        children and pets.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="app.js"></script>
+</body>
+
+</html>

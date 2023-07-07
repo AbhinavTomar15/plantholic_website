@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plantaholic</title>
+    <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous"> -->
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/079eeb4b36.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="bg2">
+        <header>
+            <div class="header-visible">
+                <div class="logoname">
+                    <a href="home.html"> <img id="logopic"
+                            src="depositphotos_75677281-stock-illustration-abstract-sphere-green-leaf-logo-removebg-preview.png"
+                            alt=""></a>
+                    <h2>Plantaholic</h2>
+                </div>
+                <nav>
+                    <ul class="nav_links">
+                        <li>
+                            <div class="dropdown">
+                                <i class="fa-solid fa-seedling"></i>
+                                <button class="menubtn1">Plants</button>
+                                <i class="fa fa-caret-down"></i>
+                                <div class="dropdown-plants">
+                                    <a class="links-hidden" href="indoor_plants.html">Indoor plants</a>
+                                    <a class="links-hidden" href="outdoor_plants.html">Outdoor plants</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li> <i class="fa-brands fa-envira"></i>
+                            <a href="gallery.html">Gallery</a>
+                        </li>
+                        <li>
+                            <div class="dropdown">
+                                <i class="fa-solid fa-tree"></i>
+                                <button class="menubtn2 active">Plant care</button>
+                                <i class="fa fa-caret-down"></i>
+                                <div class="dropdown-care">
+                                    <a class="links-hidden active" href="plant_growth.html">Plant growth</a>
+                                    <a class="links-hidden" href="plant_protection.html">Plant protection</a>
+                                    <a class="links-hidden" href="garden_tools.html">Garden tools</a>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="rightnav">
+                    <!-- <div>
+                    <input class="searchbar" type="search" placeholder="    Search..">
+                    <button class="searchbtn"><i class="fas fa-search"></i></button>
+                </div> -->
+                    <div>
+                        <button class="login-btn open-button" onclick="openForm()">Log in</button>
+                    </div>
+                    <span class="nav-lines" style="cursor: pointer" onclick="openNav()">&#9776;</span>
+                </div>
+            </div>
+
+            <div id="mySidenav" class="sidenav">
+                <a href="javascript:void(0)" class="closebtn" id="x-button" onclick="closeNav()">&times;</a>
+                <ul class="nav_links">
+                    <li>
+                        <div class="dropdown">
+                            <i class="fa-solid fa-seedling"></i>
+                            <!-- <i class="fa-solid fa-hand-holding-seedling"></i> -->
+                            <button class="menubtn1">Plants</button>
+                            <i class="fa fa-caret-down"></i>
+                            <div class="dropdown-plants">
+                                <a class="links-hidden" href="indoor_plants.html">Indoor plants</a>
+                                <a class="links-hidden" href="outdoor_plants.html">Outdoor plants</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="dropdown gallery-nav-container">
+                            <i class="fa-brands fa-envira"></i>
+                            <a class="gallery-nav" href="gallery.html">Gallery</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="dropdown">
+                            <i class="fa-solid fa-tree"></i>
+                            <button class="menubtn2 active">Plant care</button>
+                            <i class="fa fa-caret-down"></i>
+                            <div class="dropdown-care">
+                                <a class="links-hidden active" href="plant_growth.html">Plant growth</a>
+                                <a class="links-hidden" href="plant_protection.html">Plant protection</a>
+                                <a class="links-hidden" href="garden_tools.html">Garden tools</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <button class="login-btn open-button" onclick="openForm()">Log in</button>
+                    </li>
+                </ul>
+            </div>
+        </header>
+        <div class="form-popup" id="myForm">
+            <form action="/action_page.php" class="form-container">
+                <h1 class="form_title">Login</h1>
+                <div class="fields">
+                    <label for="email"> <b>
+
+                            <h3> <i class="fa-solid fa-envelope"></i> Email </h3>
+                        </b> </label>
+                    <input type="text" placeholder="xyz@abc.com" name="email" required>
+                    <p class="error"> Wrong Email </p>
+
+                    <label for="psw"> <b>
+
+                            <h3> <i class="fa-solid fa-key"></i> Password </h3>
+                        </b> </label>
+                    <input type="password" placeholder="Enter Password" name="psw" required>
+                    <p class="error"> Wrong Password </p>
+                </div>
+
+                <span>
+                    First time here? <i> <a href="sign_up.html"> Sign up </a> </i>
+                </span>
+
+                <!-- <div class="buttons"> -->
+                <button type="submit" class="btn login">Login</button>
+                <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+                <!-- </div> -->
+            </form>
+        </div>
+        <button onclick="topFunction()" id="myBtn" title="Go to top"> <i class="fa-solid fa-circle-arrow-up"> </i> Back
+            to
+            top </button>
+        <section>
+            <div class="para-indoor">
+                <p> <br>
+                    The fertilizers are apt to stimulate the plant growth, but they do not make up for poor soil
+                    preparation, weed growth, lack of water and other factors that limit the growth of the plant due to
+                    nutrient deficiency. Hence using soil and manure is beneficial to ensure that the soil
+                    micro-organisms give adequate nutrition to the soil, and the plant growth is proper as the soil
+                    structure is improved.
+                    <br> <br>
+                </p>
+            </div>
+        </section>
+        <div class="indoor-container">
+
+            <div class="indoor gardentools_card">
+                <div class="pic-indoor picgrow1">
+                    <div class="indoor-name namein1">
+                        Cocopeat Block
+                    </div>
+                </div>
+                <div class="indoor-info infogrow1">
+                    <p>
+                        Made of the inner fibres of coconut, coco peat is light weight, well draining and retains
+                        moisture for longer without getting water logged. Naturally anti-fungal, it is essential in
+                        healthy potting mixes. Excellent for soil aeration and seed germination as the loose structure
+                        allows for easy root development.Coco Brick is an excellent growing medium for soil mixes.
+                    </p>
+                </div>
+            </div>
+            <div class="indoor gardentools_card">
+                <div class="pic-indoor picgrow2">
+                    <div class="indoor-name namein1">
+                        Epsom salt
+                    </div>
+                </div>
+                <div class="indoor-info infogrow2">
+                    <p>
+                        Epsom salt is a magnesium sulphate compound is used extensively to help ornamental flowering
+                        plants bloom more profusely and achieve greener and bushier foliage. Made of hydrated magnesium
+                        and sulfur, it is essential to healthy plant growth and greener leaves. Use it in the right
+                        proportion for a garden full of blooms and stunning green foliage.
+                    </p>
+                </div>
+            </div>
+            <div class="indoor gardentools_card">
+                <div class="pic-indoor picgrow3">
+                    <div class="indoor-name namein1">
+                        Garden Soil Mix
+                    </div>
+                </div>
+                <div class="indoor-info infogrow3">
+                    <p>
+                        This soil mix is an excellent blend of nutrient-rich red soil and cow manure. The mixture can be
+                        readily used by both urban and commercial growers. Completely organic in nature it can be
+                        utilized for ornamental, vegetable or flowering plants with ease. Use it directly from the
+                        packet for a majority of indoor plants or mix it with perlite.
+                    </p>
+                </div>
+            </div>
+            <div class="indoor gardentools_card">
+                <div class="pic-indoor picgrow4">
+                    <div class="indoor-name namein1">
+                        Vermicompost
+                    </div>
+                </div>
+                <div class="indoor-info infogrow4">
+                    <p>
+                        Vermicompost is made by breaking down the organic material through the use of worms.
+                        Vermicompost improves biological, chemical, and physical properties of the soil. The worms break
+                        down soil and organic matter, so the nutrients are immediately available to plants. Vermicompost
+                        enhances plant growth, suppresses disease in plants, increases porosity and microbial activity
+                        in soil, and improves water retention and aeration.
+                    </p>
+                </div>
+            </div>
+            <div class="indoor gardentools_card">
+                <div class="pic-indoor picgrow5">
+                    <div class="indoor-name namein1">
+                        Plant Fertilizer Pellets
+                    </div>
+                </div>
+                <div class="indoor-info infogrow5">
+                    <p>
+                        Made of organic poultry litter, the plant pellet fertilizer breathes life into the soil by
+                        adding in organic matter. It improves moisture retention and promotes the growth of beneficial
+                        microbes. It contains other micronutrients and NPK elements that enriches the soil without
+                        burning the roots. The pelleted form makes for easy application.
+                    </p>
+                </div>
+            </div>
+            <div class="indoor gardentools_card">
+                <div class="pic-indoor picgrow6">
+                    <div class="indoor-name namein1">
+                        Cow Manure
+                    </div>
+                </div>
+                <div class="indoor-info infogrow6">
+                    <p>
+                        Cow Manure is an excellent fertilizer highly rich with organic matter and helps to
+                        improve aeration and break up compact soils. It is developed from composted cow dung of the
+                        Indian Desi cow and is incredibly rich with beneficial bacteria that convert soil nutrients into
+                        readily available forms for the tender plant.
+                    </p>
+                </div>
+            </div>
+
+
+        </div>
+        <section class="footer-info">
+            <p>
+                However as plants grow, they use up all nutrients available in soil and the overall nutrient
+                availability is reduced gradually. These nutrients can be added to the soil in the form of plant growth
+                regulators and fertilizers. They are available in the form of commercially manufactured fertilizers or
+                organic fertilizers as well as composts, manures and ready to use soil mixtures.
+            </p>
+        </section>
+    </div>
+    <script type="text/javascript" src="app.js"></script>
+</body>
+
+</html>

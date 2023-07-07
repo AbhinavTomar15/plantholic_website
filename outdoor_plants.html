@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plantaholic</title>
+    <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous"> -->
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/079eeb4b36.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="bg2">
+        <header>
+            <div class="header-visible">
+                <div class="logoname">
+                    <a href="home.html"> <img id="logopic"
+                            src="depositphotos_75677281-stock-illustration-abstract-sphere-green-leaf-logo-removebg-preview.png"
+                            alt=""></a>
+                    <h2 href="home.html">Plantaholic</h2>
+                </div>
+                <nav>
+                    <ul class="nav_links">
+                        <li>
+                            <div class="dropdown">
+                                <i class="fa-solid fa-seedling"></i>
+                                <button class="menubtn1 active">Plants</button>
+                                <i class="fa fa-caret-down"></i>
+                                <div class="dropdown-plants">
+                                    <a class="links-hidden" href="indoor_plants.html">Indoor plants</a>
+                                    <a class="links-hidden active" href="outdoor_plants.html">Outdoor plants</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li> <i class="fa-brands fa-envira"></i>
+                            <a href="gallery.html">Gallery</a>
+                        </li>
+                        <li>
+                            <div class="dropdown">
+                                <i class="fa-solid fa-tree"></i>
+                                <button class="menubtn2">Plant care</button>
+                                <i class="fa fa-caret-down"></i>
+                                <div class="dropdown-care">
+                                    <a class="links-hidden" href="plant_growth.html">Plant growth</a>
+                                    <a class="links-hidden" href="plant_protection.html">Plant protection</a>
+                                    <a class="links-hidden" href="garden_tools.html">Garden tools</a>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="rightnav">
+                    <!-- <div>
+                    <input class="searchbar" type="search" placeholder="    Search..">
+                    <button class="searchbtn"><i class="fas fa-search"></i></button>
+                </div> -->
+                    <div>
+                        <button class="login-btn open-button" onclick="openForm()">Log in</button>
+                    </div>
+                    <span class="nav-lines" style="cursor: pointer" onclick="openNav()">&#9776;</span>
+
+
+                </div>
+            </div>
+
+            <div id="mySidenav" class="sidenav">
+                <a href="javascript:void(0)" class="closebtn" id="x-button" onclick="closeNav()">&times;</a>
+                <ul class="nav_links">
+                    <li>
+                        <div class="dropdown">
+                            <i class="fa-solid fa-seedling"></i>
+                            <!-- <i class="fa-solid fa-hand-holding-seedling"></i> -->
+                            <button class="menubtn1 active">Plants</button>
+                            <i class="fa fa-caret-down"></i>
+                            <div class="dropdown-plants">
+                                <a class="links-hidden" href="indoor_plants.html">Indoor plants</a>
+                                <a class="links-hidden active" href="outdoor_plants.html">Outdoor plants</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="dropdown gallery-nav-container">
+                            <i class="fa-brands fa-envira"></i>
+                            <a class="gallery-nav" href="gallery.html">Gallery</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="dropdown">
+                            <i class="fa-solid fa-tree"></i>
+                            <button class="menubtn2">Plant care</button>
+                            <i class="fa fa-caret-down"></i>
+                            <div class="dropdown-care">
+                                <a class="links-hidden" href="plant_growth.html">Plant growth</a>
+                                <a class="links-hidden" href="plant_protection.html">Plant protection</a>
+                                <a class="links-hidden" href="garden_tools.html">Garden tools</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <button class="login-btn open-button" onclick="openForm()">Log in</button>
+                    </li>
+                </ul>
+            </div>
+        </header>
+        <div class="form-popup" id="myForm">
+            <form action="/action_page.php" class="form-container">
+                <h1 class="form_title">Login</h1>
+                <div class="fields">
+                    <label for="email"> <b>
+
+                            <h3> <i class="fa-solid fa-envelope"></i> Email </h3>
+                        </b> </label>
+                    <input type="text" placeholder="xyz@abc.com" name="email" required>
+                    <p class="error"> Wrong Email </p>
+
+                    <label for="psw"> <b>
+
+                            <h3> <i class="fa-solid fa-key"></i> Password </h3>
+                        </b> </label>
+                    <input type="password" placeholder="Enter Password" name="psw" required>
+                    <p class="error"> Wrong Password </p>
+                </div>
+
+                <span>
+                    First time here? <i> <a href="sign_up.html"> Sign up </a> </i>
+                </span>
+
+                <!-- <div class="buttons"> -->
+                <button type="submit" class="btn login">Login</button>
+                <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+                <!-- </div> -->
+            </form>
+        </div>
+        <!-- <section>
+            <div class="para2">
+                <p>
+                    Indoor plants are easy to tend to, brighten up your interiors and in the bargain, purify all that stale air and poisonous gases leaving you as fresh as a dewy daisy every day! <br><br>
+                </p>
+            </div>
+        </section> -->
+        <button onclick="topFunction()" id="myBtn" title="Go to top"> <i class="fa-solid fa-circle-arrow-up"> </i> Back
+            to
+            top </button>
+        <div class="indoor-container">
+            <div class="indoor in1">
+                <div class="pic-indoor picout1">
+                    <div class="indoor-name namein1">
+                        Lavender
+                    </div>
+                </div>
+                <div class="indoor-info infoin1">
+                    <p>
+                        The Lavender scent is one of the most loved scents that you will find in almost every household
+                        as a freshener. With the herb plant in your garden, the beautiful aromatic scents just get
+                        better. You also do not have to worry about missing those moments
+                        when you pass by and brush your hand over the flowers to get the fragrance on you. Because these
+                        plants are hardy perennials, they are all blooming throughout the year.
+                    </p>
+                </div>
+            </div>
+            <div class="indoor in2">
+                <div class="pic-indoor picout2">
+                    <div class="indoor-name namein2">
+                        Canna Lily
+                    </div>
+                </div>
+                <div class="indoor-info infoin2">
+                    <p>
+                        The beauty of your garden and house has to be captured from a distance as well as within
+                        proximity, and the Canna Lily plant captures all that and more with its larger-than-life leaves
+                        and strikingly beautiful flowers. You can pot these tall and beautiful
+                        plants and line them up to your walkway or driveway, and have your own sort of personal private
+                        space.
+                    </p>
+                </div>
+            </div>
+            <div class="indoor in3">
+                <div class="pic-indoor picout3">
+                    <div class="indoor-name namein3">
+                        Strawberry
+                    </div>
+                </div>
+                <div class="indoor-info infoin3">
+                    <p>
+                        Making your home nature-friendly and health-friendly brings us to the strawberry plants. And
+                        yes, they still present all the benefits other plants in the outdoor category present -
+                        beautiful views, nourishing scents, and complement some of your best garden
+                        plants as well. You can easily mix in a blend of scents and colour tones to your view the way
+                        you want, but try adding a few strawberries; you will thank me later when you are having your
+                        morning walk and pass by some fresh edibles.
+                    </p>
+                </div>
+            </div>
+            <div class="indoor in4">
+                <div class="pic-indoor picout4">
+                    <div class="indoor-name namein4">
+                        Begonia
+                    </div>
+                </div>
+                <div class="indoor-info infoin4">
+                    <p>
+                        An outdoor view enriched with beautiful plants is welcoming. But, what about that with a variety
+                        of Begonia plants with different colour shades? The Begonia plant is available in a variety of
+                        colours including pink, orange, red, and rose. And all these
+                        beautiful blooms will stay up even in the coldest winter. Though like other plants, they need
+                        time in the sun.
+                    </p>
+                </div>
+            </div>
+            <div class="indoor in5">
+                <div class="pic-indoor picout5">
+                    <div class="indoor-name namein5">
+                        Herbs
+                    </div>
+                </div>
+                <div class="indoor-info infoin5">
+                    <p>
+                        You need to start considering how your patio is going to be like if you wish to achieve the
+                        perfect outdoor home makeover. And adding a few more herbs is a great and idealistic approach
+                        with many advantages. First, you can easily access your herbs whenever
+                        you wish to add fresh and healthy ingredients. You can try planting Ashwagandha, Boswellia,
+                        Cummin, and Brahmi to name but a few.
+                    </p>
+                </div>
+            </div>
+            <div class="indoor in6">
+                <div class="pic-indoor picout6">
+                    <div class="indoor-name namein6">
+                        Rose
+                    </div>
+                </div>
+                <div class="indoor-info infoin6">
+                    <p>
+                        Roses are perfect for gifting, but that does not only entail marking roses as a means to convey
+                        feelings and wishes only. You can plant roses at your place to bring the aura that roses bring
+                        to the lives of our loved ones. They can also thrive even in
+                        the coldest environment but will also require full sunshine. And they are quite easy plants to
+                        grow outside.
+                    </p>
+                </div>
+            </div>
+            <div class="indoor in7">
+                <div class="pic-indoor picout7">
+                    <div class="indoor-name namein7">
+                        Chrysanthemum
+                    </div>
+                </div>
+                <div class="indoor-info infoin7">
+                    <p>
+                        Sometimes we can not counter the seasonal changes and the effects they have on some of our air
+                        purifying plants outdoor. And some of these affected plants really have to go if you wish to
+                        maintain your spectacular plant views. The Mums plants are available
+                        in a variety of colours that blend well with other plants including pumpkins and gourds.
+                    </p>
+                </div>
+            </div>
+            <div class="indoor in8">
+                <div class="pic-indoor picout8">
+                    <div class="indoor-name namein8">
+                        Hydrangea
+                    </div>
+                </div>
+                <div class="indoor-info infoin8">
+                    <p>
+                        You can also create a thick bush/jungle-like setting on your outdoor space without moving
+                        mountains and making river channels. It’s all possible with the Hydrangea plants; they are
+                        beautiful shrubs that boast gorgeous flowers from early summer up to fall.
+                    </p>
+                </div>
+            </div>
+            <div class="indoor">
+                <div class="pic-indoor picout9">
+                    <div class="indoor-name namein9">
+                        Succulents
+                    </div>
+                </div>
+                <div class="indoor-info infoin9">
+                    <p>
+                        If you have a busy schedule and could not find time to tend to your garden plants. You can add
+                        Succulents, one of the top garden plants. They do not require as much maintenance but will still
+                        maintain their beautiful appearance. So if you don’t have a
+                        minute or two to spare to water your garden plants, succulents are the ideal plants you can add
+                        up to your garden.
+                    </p>
+                </div>
+            </div>
+            <div class="indoor in10">
+                <div class="pic-indoor picout10">
+                    <div class="indoor-name namein10">
+                        Palms
+                    </div>
+                </div>
+                <div class="indoor-info infoin10">
+                    <p>
+                        Home improvements with plants go a long way when you plant beautiful palm trees. Even when they
+                        are still in the early stages of growth, the palm trees always exude their beautiful appearance.
+                        They also have a quick growth rate if you wish to raise the
+                        value of your property within a short period of time.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="app.js"></script>
+</body>
+
+</html>
